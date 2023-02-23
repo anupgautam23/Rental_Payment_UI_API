@@ -138,41 +138,37 @@
 
   
               const saveOrder = async() => {
-                    let cname = document.getElementById('name').value;
-                    let mobile = document.getElementById('mob').value;    
-                    let email = document.getElementById('email').value;
-                    let address = document.getElementById('add').value;
+                event.preventDefault()
+
+
+// <!-- database section   --> 
+
+            //         let cname = document.getElementById('name').value;
+            //         let mobile = document.getElementById('mob').value;    
+            //         let email = document.getElementById('email').value;
+            //         let address = document.getElementById('add').value;
               
-                    event.preventDefault()
+            //         event.preventDefault()
                      
 
 
-            let res = await fetch('http://localhost:8888/customer/save',{
-                    method: 'POST',
-                    headers: {
-                      'Accept': 'application/json',
-                      'content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                      Name: cname,
-                      mobile : mobile,
-                      email : email,
-                      address: address
-                    })
-              })
+            // let res = await fetch('http://localhost:8888/customer/save',{
+            //         method: 'POST',
+            //         headers: {
+            //           'Accept': 'application/json',
+            //           'content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify({
+            //           Name: cname,
+            //           mobile : mobile,
+            //           email : email,
+            //           address: address
+            //         })
+            //   })
               alert('Data added successfully !!!')
               window.location.href="payment.html"
               }
     
-  //   function isChecked(){
-  //   if(document.getElementById("mycheck").checked){
-  //     // event.preventDefault()
-
-  
-  //   }else{
-  //     alert('please accept the terms and conditions !!!')
-  //   }
-  //  }
   
 
   

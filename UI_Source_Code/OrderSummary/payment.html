@@ -157,28 +157,28 @@ const Submit = document.querySelector('#btn')
               
                     event.preventDefault()
                      
+                    // <!-- database section   --> 
 
-
-            let res = await fetch('http://localhost:8888/Payment/save',{
-                    method: 'POST',
-                    headers: {
-                      'Accept': 'application/json',
-                      'content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                      payMode: type,
-                      CardHolderName : CHName,
-                      CardNumber : Cnumber,
-                      date: vdate
-                    })
-              })
+            // let res = await fetch('http://localhost:8888/Payment/save',{
+            //         method: 'POST',
+            //         headers: {
+            //           'Accept': 'application/json',
+            //           'content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify({
+            //           payMode: type,
+            //           CardHolderName : CHName,
+            //           CardNumber : Cnumber,
+            //           date: vdate
+            //         })
+            //   })
               
-              if(res){ 
+            
                   alert('Payment success with '+type+" mode")
                   
-                  }else{
-                    alert('Payment failed')
-                  }
+                  
+                    
+                 
               }
    
  Submit.addEventListener('click',savePayment)

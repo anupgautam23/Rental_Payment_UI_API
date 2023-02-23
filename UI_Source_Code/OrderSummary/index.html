@@ -138,35 +138,33 @@ const next = document.querySelector('#btn')
 
 
 const saveOrder = async() => {
-  let pname = document.getElementById('pname').value;
-  let price1 = document.getElementById('price').value;
-  let price2 = parseInt(price1);
-  let oId = document.getElementById('oid').value;
-  let date1 = document.getElementById('date').value;
   event.preventDefault()
- let res = await fetch('http://localhost:8888/Order/save',{
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json',
-    'content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    productName: pname,
-    price : price2,
-    OrderId : oId,
-    date: date1
-  })
- })
-if(res){
+
+  // <!-- database section   --> 
+
+//   let pname = document.getElementById('pname').value;
+//   let price1 = document.getElementById('price').value;
+//   let price2 = parseInt(price1);
+//   let oId = document.getElementById('oid').value;
+//   let date1 = document.getElementById('date').value;
  
+//  let res = await fetch('http://localhost:8888/Order/save',{
+//   method: 'POST',
+//   headers: {
+//     'Accept': 'application/json',
+//     'content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({
+//     productName: pname,
+//     price : price2,
+//     OrderId : oId,
+//     date: date1
+//   })
+//  })
+
  alert('Product added to database successfully')
  window.location.href="customer.html"
-}else{
-  alert('internal server error!!!')
-}
- 
-      
- 
+
 }
 
 next.addEventListener('click',saveOrder)
